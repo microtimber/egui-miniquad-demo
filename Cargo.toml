@@ -21,13 +21,16 @@ name = "demo"
 # crate-type = ["cdylib"]
 
 [dependencies]
-miniquad = { version = "=0.3.0-alpha.28", features = ["log-impl"] }
-egui = "0.10.0"
-egui-miniquad = "0.2.0"
-egui_demo_lib = "0.10.0" #-- for demo purposes only
+miniquad = { version = "=0.3.0-alpha.37", features = ["log-impl"] }
+egui = "0.15.0"
+egui-miniquad = "0.7.0"
+egui_demo_lib = "0.15.0" #-- for demo purposes only
 
 [dev-dependencies]
 pretty_assertions = "0.6"
+
+[patch.crates-io]
+sapp-android = {path = "./native/sapp-android"}
 
 [profile.release]
 opt-level = 2 # fast and small wasm
